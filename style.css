@@ -1,7 +1,9 @@
 
 body {
     background-color:blue;
+    font-weight: bold;
     font-size: 20px;
     font-style: italic;
     font-weight: 40px;
+    margin: auto 0;
 }
