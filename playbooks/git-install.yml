@@ -1,0 +1,12 @@
+---
+- name: Install git on all nodes
+  hosts: all
+  tasks:
+    - name: Install git
+      apt:
+        name: git
+        state: present
+        update_cache: yes
+
+  #ansible-playbook --vault-id @promp git-install yml
+

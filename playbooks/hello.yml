@@ -1,13 +1,24 @@
 ---
 # ansible -m file -a 'path=/tmp/surekha.txt state=present' all 
-# YAML - yet another markup lang
-- name: create at new file and delete it.
+# ansible prod  -m copy -a 'src=/etc/hosts dest=/tmp
+
+- name: create at new file and copy host file from ansible it.
   hosts: all
   tasks: 
     - name: create username file in tmp directory
       file: 
         path: '/tmp/surekha.txt'
         state: touch
+    - name: copy ansible hosts file on every node
+      copy: 
+       src: '/etc/ansible/hosts'
+       dest: '/tmp'
+
+
+
+
+
+
 
 # touch hello.yml
 # gedit or vi hello.yml
