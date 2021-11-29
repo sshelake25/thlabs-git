@@ -1,0 +1,26 @@
+---
+- name: install httpd packages and update sample webpage and start service
+  hosts: all
+  become: yes
+ 
+  tasks:
+  - name: Update all packages to their latest version
+    apt:
+     name: "*"
+     state: latest
+    
+  - name: Install apache2 httpd
+    apt:
+     name: apache2
+     state: present
+    
+  - name: Copy index test page
+    copy:
+     src: "index.html"
+     dest: "/var/www/html/index.html"
+     force: yes
+    
+  - name: Restart Apache
+    service:
+     name: apache2
+     state: restarted
