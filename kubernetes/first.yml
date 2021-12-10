@@ -1,0 +1,16 @@
+# this first pod in k
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: testpod
+spec:
+  containers:
+    - name: c01
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; echo Hello-World; sleep 5; done"]
+    - name: c02
+      image: sshelake25/htbs:my_ansible_repo
+      command: ["/bin/bash", "-c", "echo byee-World"]
+  restartPolicy: Never
+

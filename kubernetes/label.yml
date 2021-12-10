@@ -1,0 +1,15 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pune-pod
+  labels:
+    env: dev
+    class: pods
+    skill: devops
+spec:
+  containers:
+    - name: c00
+      image: ubuntu
+      command:
+        ["/bin/bash", "-c", "while true; do echo Hello-world; sleep 5 ; done"]

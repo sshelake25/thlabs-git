@@ -1,0 +1,14 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: thbh-pod
+  labels:
+    env: dev
+spec:
+  containers:
+    - name: c00
+      image: ubuntu
+      command:
+        ["/bin/bash", "-c", "while true; do echo Hello-world; sleep 5 ; done"]
+  nodeSelector:
+    cmpy: small
