@@ -13,6 +13,13 @@ pipeline {
              echo 'Byee Byee Jenkins'
         }
     }
+
+    stage ('build zip file') {
+      steps {
+        archive *
+      }
+    }
+
   }
 }
  
