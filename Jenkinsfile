@@ -1,6 +1,8 @@
 // Declarative //
 pipeline {
+  
   agent any 
+
   stages {
     stage('Hello World') { 
         steps { 
@@ -16,7 +18,7 @@ pipeline {
 
     stage ('build zip file') {
       steps {
-        archive *
+        archive '*'
       }
     }
 
