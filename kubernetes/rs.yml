@@ -1,0 +1,25 @@
+kind: ReplicaSet
+apiVersion: apps/v1
+metadata:
+  name: myrs
+spec:
+  replicas: 2
+  selector:
+    matchExpressions: # these must match the labels
+      - { key: myname, operator: In, values: [surekha, shelake, shelake] }
+      - { key: env, operator: In, values: [prod, test] }
+  template:
+    metadata:
+      name: testpod7
+      labels:
+        env: prod
+    spec:
+      containers:
+        - name: c00
+          image: ubuntu
+          command:
+            [
+              "/bin/bash",
+              "-c",
+              "while true; do echo Hello world; sleep 5 ; done",
+            ]

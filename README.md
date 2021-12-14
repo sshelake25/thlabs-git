@@ -23,3 +23,5 @@ if files are added newly and you want to add inside stage -
   - you should be staging changes before saveing stash.. else newly added files not going to be part of saved stash
   
   
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
