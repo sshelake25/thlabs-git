@@ -1,0 +1,26 @@
+---
+- name : "create director and add file inside"
+  hosts : all
+  become : yes
+  tasks: 
+    - name : "create dirctory"
+      file : 
+        path : '/tmp/surekha'
+        state: touch
+    - name : "copy file inside surekha"
+      copy : 
+        src: './config.txt' 
+        dest: '/tmp/surekha'
+
+- name : "create director and add file inside"
+  hosts : all
+  become : yes
+  tasks: 
+    - name : "create dirctory"
+      file : 
+        path : '/tmp/surekha'
+        state: touch
+    - name : "copy file inside surekha"
+      copy : 
+        src: './config.txt' 
+        dest: '/tmp/surekha'
