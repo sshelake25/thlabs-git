@@ -1,0 +1,62 @@
+use db train
+
+db.createCollection("abc",
+{capped : true, size : 10, max : 2
+})
+
+
+db.abc.insertMany(
+[
+    {
+  prodName: 'shirt', prodSize: 23, pPrice: 100,  prod_Cat: [
+            { cname: 'cloths', csku: 'kclolths'
+            }
+        ]
+    },
+    {
+  prodName: 'pan', prodSize: 40, pPrice: 200,  prod_Cat: [
+            { cname: 'cloths', csku:   'mclolths'
+            }
+        ]
+    }
+])
+
+
+
+db.createCollection("students",
+{
+    validator: {
+       $jsonSchema: {
+          bsonType: "object",
+          required: [
+                "name"
+            ],
+          properties: {
+             name: {
+                bsonType: "string",
+                description: "must be a string and is required"
+                }
+            }
+        }
+    }
+})
+
+//Cursor
+
+db.createCollection("geekFlare");
+db.geekFlare.insertMany([
+    {pName: 'mouse', pPrice: 100, qty: 10},
+    {pName: 'pen', pPrice: 100, qty: 10},
+    {pName: 'wire', pPrice: 100, qty: 10},
+    {pName: 'keyboard', pPrice: 100, qty: 10}
+])
+
+> var newData=db.geekFlare.find()
+> newData.forEach(printjson)
+{ "_id" : 1, "product" : "bottles", "Qty" : 100 }
+{ "_id" : 2, "product" : "bread", "Qty" : 20 }
+{ "_id" : 3, "product" : "yogurt", "Qty" : 30 }
+
+db.users.find().forEach( 
+   function(myDoc) { print( "user: " + myDoc.name ); }
+ );

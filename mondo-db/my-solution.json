@@ -1,0 +1,80 @@
+initial document in catalog
+
+{
+    'Manufacturer': 'Samsung',
+    'Model': 'A52',
+    'Camera': '48 MP',
+    'Display': '6 inch',
+    'Android': 'Nougat',
+    'Price': 50000,
+}
+
+
+{
+    'Manufacturer': 'MI',
+    'Model': 'OnePlus',
+    'Camera': '48 MP',
+    'Display': '6 inch',
+    'Android': 'Nougat',
+    'Price': 30000,
+    'battery': 4000
+},
+
+{
+    'Manufacturer': 'Apple',
+    'Model': 'Iphone 6',
+    'Camera': '48 MP',
+    'Display': '5.5 inch',
+    'Android': 'ios',
+    'Price': 46000,
+    'battery': 3000
+}
+
+
+
+//--------------------------
+{
+    'Manufacturer': 'OPPO',
+    'Model': 'F5',
+    'Camera': '16 MP',
+    'Display': '6 inch',
+    'Android': 'Nougat',
+    'Price': 20000
+}
+
+{
+    'Manufacturer': 'OPPO',
+    'Model': 'A57',
+    'Camera': '13 MP',
+    'Display': '5.2 inch',
+    'Memory': '32GB',
+    'Price': 14000
+}
+
+{
+    'Manufacturer': 'MI',
+    'Model': 'Max 2',
+    'Memory': '32, 64, 128 GB',
+    'Price': 15000
+}
+
+
+{
+    'Manufacturer': 'Google',
+    'Model': 'Pixel 2',
+    'Memory': '32, 64, 128 GB',
+    'Colors': 'Clearly White, Jet Black, Very Silver'
+}
+
+//
+
+//
+
+// inital document set
+
+// 
+
+
+
+// -- 
+

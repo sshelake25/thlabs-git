@@ -1,0 +1,87 @@
+var mydata = [
+    {
+        "nexusVersion": "SNAPSHOT-1.0.0",
+        "matrix": {
+            "zcord": [
+                12,
+                70
+            ],
+            "ycord": [
+                100,
+                45
+            ]
+        },
+        "artifacts": [
+            {
+                "file": "pom.xml"
+            },
+            {
+                "type": [
+                    {
+                        "fname": 'traval',
+                        "ext": ".png",
+                        "size": 1024
+                    },
+                    {
+                        "fname": 'profile', // mydata[0][artifact][type][1][ext]
+                        "ext": ".jpeg", // mydata[artifact][type][fname:'profile'][ext]
+                        "size": 500
+                    }
+                ]
+            }
+        ],
+        "finalbuild": 12
+    },
+    {
+        "nexusVersion": "SNAPSHOT-1.0.0",
+        "matrix": {
+            "zcord": [
+                12,
+                70
+            ],
+            "ycord": [
+                100,
+                45
+            ]
+        },
+        "artifacts": [
+            {
+                "file": "pom.xml"
+            },
+            {
+                "type": [
+                    {
+                        "fname": 'traval',
+                        "ext": ".png",
+                        "size": 1024
+                    },
+                    {
+                        "fname": 'profile',
+                        "ext": ".jpeg", // mydata[artifact][type][fname:'profile'][ext]
+                        "size": 500 // mydata["artifacts"]
+                    }
+                ]
+            }
+        ],
+        "finalbuild": 12
+    }
+];
+
+var number = [
+    "one",
+    "two",
+    "three"
+];
+number[
+    2
+] // three
+
+var number = [
+    {'price': 10, product: 'mouse'
+    },
+    { 'price': 20, product: 'keyboard'
+    },
+    {'price': 2, product: [ { key: 'smart'}]}
+];
+
+// number[2]['product'][0]['key'] -->     smart
